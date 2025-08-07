@@ -1,0 +1,41 @@
+mehak-accessories-website/
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ui/ (shadcn components)
+│   │   │   ├── header.tsx
+│   │   │   ├── footer.tsx  
+│   │   │   ├── product-card.tsx
+│   │   │   ├── cart-sidebar.tsx
+│   │   │   └── whatsapp-float.tsx
+│   │   ├── pages/
+│   │   │   ├── home.tsx
+│   │   │   ├── products.tsx
+│   │   │   ├── cart.tsx
+│   │   │   ├── contact.tsx
+│   │   │   └── not-found.tsx
+│   │   ├── hooks/
+│   │   │   ├── use-cart.tsx
+│   │   │   ├── use-toast.ts
+│   │   │   └── use-mobile.tsx
+│   │   ├── lib/
+│   │   │   ├── queryClient.ts
+│   │   │   └── utils.ts
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   └── index.css
+│   └── index.html
+├── server/
+│   ├── index.ts
+│   ├── routes.ts
+│   ├── storage.ts
+│   └── vite.ts  
+├── shared/
+│   └── schema.ts
+├── package.json
+├── vite.config.ts
+├── tailwind.config.ts
+├── tsconfig.json
+├── postcss.config.js
+├── components.json
+└── README.md

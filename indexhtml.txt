@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehak Mobile Accessories & Spare Parts - Mobile & PC Parts Store Agra</title>
+    <meta name="description" content="Quality mobile accessories, PC components, and repair tools at unbeatable prices. Your trusted partner in Agra for mobile and computer parts.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #1e40af 0%, #3730a3 50%, #1e1b4b 100%); }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+        .product-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/918979745072" target="_blank" class="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-2 text-sm text-gray-600 border-b border-gray-200">
+                <div class="flex items-center space-x-4">
+                    <span><i class="fas fa-map-marker-alt text-green-600"></i> Agra Shah Market</span>
+                    <span><i class="fas fa-phone text-green-600"></i> +91 8979745072</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <span>Free Shipping on Orders Above ₹500</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between py-4">
+                <h1 class="text-2xl font-inter font-bold text-blue-800">
+                    <i class="fas fa-mobile-alt text-green-600 mr-2"></i>
+                    Mehak Accessories
+                </h1>
+                
+                <div class="flex-1 max-w-xl mx-8 hidden md:block">
+                    <div class="relative">
+                        <input type="text" placeholder="Search for mobile accessories, PC parts..." class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button class="absolute right-1 top-1 h-8 w-8 text-gray-400 hover:text-blue-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="relative p-2 text-gray-600 hover:text-blue-600">
+                        <i class="fas fa-heart text-xl"></i>
+                        <span class="absolute -top-1 -right-1 bg-green-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    <button class="relative p-2 text-gray-600 hover:text-blue-600" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="py-3 border-t border-gray-200">
+                <ul class="flex space-x-8 text-sm font-medium overflow-x-auto">
+                    <li><a href="#home" class="text-blue-600 hover:text-blue-800">Home</a></li>
+                    <li><a href="#mobile-accessories" class="text-gray-700 hover:text-blue-600">Mobile Accessories</a></li>
+                    <li><a href="#pc-components" class="text-gray-700 hover:text-blue-600">PC Parts</a></li>
+                    <li><a href="#repair-tools" class="text-gray-700 hover:text-blue-600">Repair Tools</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-inter font-bold mb-4">
+                Your One-Stop Shop for Mobile & PC Accessories
+            </h2>
+            <p class="text-xl mb-6 text-gray-200">
+                Quality spare parts, accessories, and repair tools at unbeatable prices in Agra
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToSection('mobile-accessories')" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 text-lg rounded-lg">
+                    Shop Mobile Parts
+                </button>
+                <button onclick="scrollToSection('pc-components')" class="bg-green-600 hover:bg-green-700 px-8 py-3 text-lg rounded-lg">
+                    Browse PC Components
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-inter font-bold text-center text-blue-800 mb-12">Shop by Category</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 text-center hover:shadow-lg">
+                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Mobile Accessories</h3>
+                    <p class="text-gray-600 mb-4">Chargers, cables, cases, screen protectors, batteries</p>
+                    <button onclick="scrollToSection('mobile-accessories')" class="bg-blue-600 text-white px-6 py-2 rounded-lg">
+                        Browse Mobile Parts
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 text-center hover:shadow-lg">
+                    <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-desktop text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">PC Components</h3>
+                    <p class="text-gray-600 mb-4">Motherboards, RAM, graphics cards, processors</p>
+                    <button onclick="scrollToSection('pc-components')" class="bg-green-600 text-white px-6 py-2 rounded-lg">
+                        Shop PC Parts
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 text-center hover:shadow-lg">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Repair Tools</h3>
+                    <p class="text-gray-600 mb-4">Professional tools for mobile and computer repair</p>
+                    <button onclick="scrollToSection('repair-tools')" class="bg-purple-500 text-white px-6 py-2 rounded-lg">
+                        View Tools
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Accessories -->
+    <section id="mobile-accessories" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-inter font-bold text-center text-blue-800 mb-12">Mobile Accessories</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="mobile-products"></div>
+        </div>
+    </section>
+
+    <!-- PC Components -->
+    <section id="pc-components" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-inter font-bold text-center text-blue-800 mb-12">PC Components</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="pc-products"></div>
+        </div>
+    </section>
+
+    <!-- Repair Tools -->
+    <section id="repair-tools" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-inter font-bold text-center text-blue-800 mb-12">Repair Tools</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="tools-products"></div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-inter font-bold text-center mb-12">Contact Us</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Get in Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-green-400 text-xl mr-4"></i>
+                            <span>Agra Shah Market, Agra, Uttar Pradesh</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-green-400 text-xl mr-4"></i>
+                            <span>+91 8979745072</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-whatsapp text-green-400 text-xl mr-4"></i>
+                            <span>+91 8979745072</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Store Hours</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Monday - Saturday</span>
+                                <span>10:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sunday</span>
+                                <span>11:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 text-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">Send Message</h3>
+                    <form onsubmit="sendMessage(event)">
+                        <div class="mb-4">
+                            <input type="text" placeholder="Your Name *" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <input type="tel" placeholder="Phone Number *" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <h3 class="text-xl font-semibold mb-6">Need Immediate Help?</h3>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/918979745072" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                    </a>
+                    <a href="tel:+918979745072" class="bg-white text-blue-800 px-8 py-3 rounded-lg hover:bg-gray-100">
+                        <i class="fas fa-phone mr-2"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Mehak Mobile Accessories & Spare Parts. All rights reserved.</p>
+            <p class="mt-2">Visit us at mehakaccessories.com | Phone: +91 8979745072</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform z-50">
+        <div class="p-4 border-b">
+            <div class="flex justify-between items-center">
+                <h3 class="text-lg font-semibold">Shopping Cart</h3>
+                <button onclick="toggleCart()" class="text-gray-500">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-4">
+            <div class="text-center text-gray-500 mt-8">
+                <i class="fas fa-shopping-cart text-4xl mb-4"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const products = {
+            mobile: [
+                { id: 1, name: "Fast Charging Cable Set", price: "299", originalPrice: "499", image: "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 4.5 },
+                { id: 2, name: "Original Battery Pack", price: "1299", originalPrice: "1799", image: "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 4.0 },
+                { id: 3, name: "Back Panel Housing", price: "899", originalPrice: "1299", image: "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 5.0 },
+                { id: 4, name: "Touch Screen Display", price: "2499", originalPrice: "3299", image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 4.5 }
+            ],
+            pc: [
+                { id: 5, name: "RTX 4060 Graphics Card", price: "32999", originalPrice: "36999", image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 5.0 },
+                { id: 6, name: "16GB DDR4 RAM Kit", price: "4999", originalPrice: "6499", image: "https://images.unsplash.com/photo-1541029071515-84cc54f84dc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 4.5 },
+                { id: 7, name: "B550 Gaming Motherboard", price: "12999", originalPrice: "15999", image: "https://images.unsplash.com/photo-1518276780877-72ad78802ddd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 4.0 },
+                { id: 8, name: "1TB NVMe SSD", price: "6999", originalPrice: "8999", image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 5.0 }
+            ],
+            tools: [
+                { id: 9, name: "Precision Screwdriver Set", price: "899", originalPrice: "1299", image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 5.0 },
+                { id: 10, name: "Hot Gun Machine", price: "2499", originalPrice: "3199", image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 4.5 },
+                { id: 11, name: "DC Power Supply", price: "4999", originalPrice: "6499", image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 4.0 },
+                { id: 12, name: "Screen Separator Machine", price: "8999", originalPrice: "11999", image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300", rating: 5.0 }
+            ]
+        };
+
+        let cart = [];
+
+        function generateStars(rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 !== 0;
+            let stars = '';
+            
+            for (let i = 0; i < fullStars; i++) {
+                stars += '<i class="fas fa-star text-yellow-400"></i>';
+            }
+            if (hasHalfStar) {
+                stars += '<i class="fas fa-star-half-alt text-yellow-400"></i>';
+            }
+            for (let i = Math.ceil(rating); i < 5; i++) {
+                stars += '<i class="far fa-star text-gray-300"></i>';
+            }
+            return stars;
+        }
+
+        function createProductCard(product) {
+            const discount = Math.round((1 - parseFloat(product.price) / parseFloat(product.originalPrice)) * 100);
+            return `
+                <div class="bg-white rounded-lg shadow-md product-card">
+                    <div class="relative">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-t-lg">
+                        <span class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs">${discount}% OFF</span>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">${product.name}</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="flex">${generateStars(product.rating)}</div>
+                            <span class="text-sm text-gray-600 ml-2">(${Math.floor(Math.random() * 200 + 50)})</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-lg font-bold text-blue-600">₹${product.price}</span>
+                                <span class="text-sm text-gray-500 line-through">₹${product.originalPrice}</span>
+                            </div>
+                            <button onclick="addToCart(${product.id})" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function loadProducts() {
+            document.getElementById('mobile-products').innerHTML = products.mobile.map(createProductCard).join('');
+            document.getElementById('pc-products').innerHTML = products.pc.map(createProductCard).join('');
+            document.getElementById('tools-products').innerHTML = products.tools.map(createProductCard).join('');
+        }
+
+        function addToCart(productId) {
+            const allProducts = [...products.mobile, ...products.pc, ...products.tools];
+            const product = allProducts.find(p => p.id === productId);
+            
+            const existingItem = cart.find(item => item.id === productId);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+            
+            updateCartUI();
+            alert('Product added to cart!');
+        }
+
+        function updateCartUI() {
+            const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-count').textContent = cartCount;
+            
+            const cartItems = document.getElementById('cart-items');
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="text-center text-gray-500 mt-8">
+                        <i class="fas fa-shopping-cart text-4xl mb-4"></i>
+                        <p>Your cart is empty</p>
+                    </div>
+                `;
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="flex items-center gap-4 p-4 border-b">
+                        <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-cover rounded">
+                        <div class="flex-1">
+                            <h5 class="font-medium text-sm">${item.name}</h5>
+                            <p class="text-blue-600 font-semibold">₹${item.price} x ${item.quantity}</p>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-red-500">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `).join('') + `
+                    <div class="p-4 border-t mt-4">
+                        <div class="flex justify-between font-semibold text-lg mb-4">
+                            <span>Total: ₹${cart.reduce((sum, item) => sum + (parseFloat(item.price) * item.quantity), 0)}</span>
+                        </div>
+                        <button onclick="checkout()" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                            Order via WhatsApp
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+        }
+
+        function toggleCart() {
+            const sidebar = document.getElementById('cart-sidebar');
+            sidebar.classList.toggle('translate-x-full');
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            
+            const message = `Hello! I want to order:\n\n${cart.map(item => `${item.name} - ₹${item.price} x ${item.quantity}`).join('\n')}\n\nTotal: ₹${cart.reduce((sum, item) => sum + (parseFloat(item.price) * item.quantity), 0)}`;
+            
+            const whatsappUrl = `https://wa.me/918979745072?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function sendMessage(event) {
+            event.preventDefault();
+            const form = event.target;
+            
+            const message = `Hello! Contact request:\n\nName: ${form[0].value}\nPhone: ${form[1].value}\nMessage: ${form[2].value}`;
+            const whatsappUrl = `https://wa.me/918979745072?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+            form.reset();
+            alert('Thank you! Redirecting to WhatsApp...');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProducts();
+        });
+    </script>
+</body>
+</html>
